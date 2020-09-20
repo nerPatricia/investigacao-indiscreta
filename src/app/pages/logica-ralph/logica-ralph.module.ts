@@ -1,5 +1,5 @@
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { Evento2Page } from './evento2.page';
+import { LogicaRalphPage } from './logica-ralph.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -10,7 +10,7 @@ import { LoadingService } from 'src/app/service/loading.service';
 const routes: Routes = [
   {
     path: '',
-    component: Evento2Page
+    component: LogicaRalphPage
   }
 ];
 
@@ -23,6 +23,6 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   providers: [LoadingService],
-  declarations: [Evento2Page]
+  declarations: [LogicaRalphPage]
 })
-export class Evento2PageModule {}
+export class LogicaRalphPageModule {}

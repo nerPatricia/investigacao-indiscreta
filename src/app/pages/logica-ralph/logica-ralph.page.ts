@@ -3,11 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
 @Component({
-  selector: 'app-evento2',
-  templateUrl: 'evento2.page.html',
-  styleUrls: ['evento2.page.scss'],
+  selector: 'app-logica-ralph',
+  templateUrl: 'logica-ralph.page.html',
+  styleUrls: ['logica-ralph.page.scss'],
 })
-export class Evento2Page {
+export class LogicaRalphPage {
   movies = [
     'Episode I - The Phantom Menace',
     'Episode II - Attack of the Clones',

@@ -18,5 +18,7 @@ export class DescricaoEnvolvidosPage {
     // });
   }
 
-  ionViewDidEnter() {}
+  avancar() {
+    
+  }
 }

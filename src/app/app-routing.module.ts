@@ -8,14 +8,24 @@ const routes: Routes = [
       import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'evento1',
+    path: 'introducao',
     loadChildren: () =>
-      import('./pages/evento1/evento1.module').then(m => m.Evento1PageModule)
+      import('./pages/introducao/introducao.module').then(m => m.IntroducaoPageModule)
   },
   {
-    path: 'evento2',
+    path: 'descricao-envolvidos',
     loadChildren: () =>
-      import('./pages/evento2/evento2.module').then(m => m.Evento2PageModule)
+      import('./pages/descricao-envolvidos/descricao-envolvidos.module').then(m => m.DescricaoEnvolvidosPageModule)
+  },
+  {
+    path: 'menu-montarlogica',
+    loadChildren: () =>
+      import('./pages/menu-montarlogica/menu-montarlogica.module').then(m => m.MenuMontarlogicaPageModule)
+  },
+  {
+    path: 'logica-ralph',
+    loadChildren: () =>
+      import('./pages/logica-ralph/logica-ralph.module').then(m => m.LogicaRalphPageModule)
   },
 ];
 
