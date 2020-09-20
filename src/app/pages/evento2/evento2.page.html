@@ -1,0 +1,20 @@
+<app-header [showButtonBack]="'/home'" title="Eventex"></app-header>
+
+<ion-content class="ion-padding">
+  <ion-grid cdkDropListGroup>
+    <div cdkDropList class="example-list" [cdkDropListData]="movies" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        {{ movie }}
+      </div>
+    </div>
+
+    <div cdkDropList [cdkDropListData]="auxs" (cdkDropListDropped)="drop($event)" class="example-list"
+      style="background-color: red; margin-top: 20px;">
+      <div class="example-box" *ngFor="let aux of auxs" cdkDrag>
+        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        {{ aux }}
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>
