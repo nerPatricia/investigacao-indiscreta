@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { Evento1Page } from './evento1.page';
+import { IntroducaoPage } from './introducao.page';
 import { Routes, RouterModule } from '@angular/router';
 import { AppHeaderModule } from 'src/app/components/app-header/app-header.module';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -10,7 +10,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 const routes: Routes = [
   {
     path: '',
-    component: Evento1Page
+    component: IntroducaoPage
   }
 ];
 
@@ -23,6 +23,6 @@ const routes: Routes = [
     DragDropModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [Evento1Page]
+  declarations: [IntroducaoPage]
 })
-export class Evento1PageModule {}
+export class IntroducaoPageModule {}
