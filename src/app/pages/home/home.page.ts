@@ -17,6 +17,6 @@ export class HomePage implements OnInit {
     //   state: { event }
     // };
     // this.router.navigate(['event-detail'], navigationExtras);
-    this.navCtrl.navigateRoot(['evento1']);
+    this.navCtrl.navigateRoot(['introducao']);
   }
 }

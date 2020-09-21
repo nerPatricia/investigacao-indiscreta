@@ -18,14 +18,14 @@ const routes: Routes = [
       import('./pages/descricao-envolvidos/descricao-envolvidos.module').then(m => m.DescricaoEnvolvidosPageModule)
   },
   {
-    path: 'menu-montarlogica',
+    path: 'depoimentos',
     loadChildren: () =>
-      import('./pages/menu-montarlogica/menu-montarlogica.module').then(m => m.MenuMontarlogicaPageModule)
+      import('./pages/depoimentos/depoimentos.module').then(m => m.DepoimentosPageModule)
   },
   {
-    path: 'logica-ralph',
+    path: 'logica-george',
     loadChildren: () =>
-      import('./pages/logica-ralph/logica-ralph.module').then(m => m.LogicaRalphPageModule)
+      import('./pages/logica-george/logica-george.module').then(m => m.LogicaGeorgePageModule)
   },
 ];
 

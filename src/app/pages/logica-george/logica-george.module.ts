@@ -1,5 +1,5 @@
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { MenuMontarlogicaPage } from './menu-montarlogica.page';
+import { LogicaGeorgePage } from './logica-george.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -10,7 +10,7 @@ import { LoadingService } from 'src/app/service/loading.service';
 const routes: Routes = [
   {
     path: '',
-    component: MenuMontarlogicaPage
+    component: LogicaGeorgePage
   }
 ];
 
@@ -19,9 +19,10 @@ const routes: Routes = [
     CommonModule,
     IonicModule,
     AppHeaderModule,
+    DragDropModule,
     RouterModule.forChild(routes)
   ],
   providers: [LoadingService],
-  declarations: [MenuMontarlogicaPage]
+  declarations: [LogicaGeorgePage]
 })
-export class MenuMontarlogicaPageModule {}
+export class LogicaGeorgePageModule {}

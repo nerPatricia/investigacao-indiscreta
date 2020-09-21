@@ -1,0 +1,32 @@
+<app-header [showButtonBack]="'/'" title="Eventex"></app-header>
+
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p><i>
+            "Cheguei às 8:05, <b>e como todo dia de manhã, fui conferir o relatório do dia anterior</b>. Como havia uma
+            encomenda, fui ao depósito deixar separado a peça para quando o agente do seguro chegasse para revisar e
+            assim realizar a venda."
+          </i></p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid cdkDropListGroup>
+    <div cdkDropList class="example-list" [cdkDropListData]="frases" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let frase of frases" cdkDrag>
+        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        {{ frase }}
+      </div>
+    </div>
+
+    <p><b>formula</b></p>
+
+    <!-- TODO: ser um campo só ao invés de uma droplist -->
+    <div cdkDropList class="example-list" [cdkDropListData]="resultado" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" cdkDrag>
+        {{ resultado }}
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>

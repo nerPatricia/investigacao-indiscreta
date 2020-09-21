@@ -1,5 +1,4 @@
-import { DragDropModule } from '@angular/cdk/drag-drop';
-import { LogicaRalphPage } from './logica-ralph.page';
+import { DepoimentosPage } from './depoimentos.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -10,7 +9,7 @@ import { LoadingService } from 'src/app/service/loading.service';
 const routes: Routes = [
   {
     path: '',
-    component: LogicaRalphPage
+    component: DepoimentosPage
   }
 ];
 
@@ -19,10 +18,9 @@ const routes: Routes = [
     CommonModule,
     IonicModule,
     AppHeaderModule,
-    DragDropModule,
     RouterModule.forChild(routes)
   ],
   providers: [LoadingService],
-  declarations: [LogicaRalphPage]
+  declarations: [DepoimentosPage]
 })
-export class LogicaRalphPageModule {}
+export class DepoimentosPageModule {}

@@ -1,3 +1,4 @@
+import { NavController } from '@ionic/angular';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -7,14 +8,9 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['introducao.page.scss'],
 })
 export class IntroducaoPage {
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-  ) {}
+  constructor(private navCtrl: NavController) {}
 
-    // this.route.queryParams.subscribe(params => {
-    //   if (this.router.getCurrentNavigation().extras.state) {
-    //     this.event = this.router.getCurrentNavigation().extras.state.event;
-    //   }
-    // });
+  avancar() {
+    this.navCtrl.navigateRoot(['descricao-envolvidos']);
+  }
 }
