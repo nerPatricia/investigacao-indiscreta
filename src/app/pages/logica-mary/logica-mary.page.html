@@ -1,0 +1,65 @@
+<app-header [showButtonBack]="'/'" title="Mary Stearns"></app-header>
+
+<ion-content class="ion-padding bg" cdkDropListGroup>
+  <ion-grid>
+    <div cdkDropList class="example-list" [cdkDropListData]="frases" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let frase of frases" cdkDrag>
+        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        {{ frase }}
+      </div>
+    </div>
+
+    <ion-row>
+      <ion-col>
+        <p>Com base nos depoimentos e as informações que tenho, preciso chegar em uma
+          conclusão utilizando minha lógica:</p>
+        <h3 style="text-align: center;"><b>~Q ^ (P -> Q) => ~P</b></h3>
+      </ion-col>
+    </ion-row>
+
+    <!-- TODO: ser um campo só ao invés de uma droplist -->
+    <div cdkDropList class="example-list" style="margin-top: 10px;" [cdkDropListData]="resultados"
+      (cdkDropListDropped)="drop($event, 0)">
+      <div class="example-box" cdkDrag>
+        {{ resultados[0] || '' }}
+      </div>
+    </div>
+    <p>e</p>
+    <div cdkDropList class="example-list" style="margin-top: 10px;" [cdkDropListData]="resultados"
+      (cdkDropListDropped)="drop($event, 1)">
+      <div class="example-box" cdkDrag>
+        {{ resultados[1] || '' }}
+      </div>
+    </div>
+    <p>logo: </p>
+    <p
+      *ngIf="resultados.length >= 2 && (resultados[0] !== 'Se alguém fica muito na loja, então sabe das câmeras' || resultados[1] !== 'O cliente não ficou muito tempo na loja')">
+      Isso não parece certo... Preciso analizar melhor.</p>
+    <p
+      *ngIf="resultados.length >= 2 && resultados[0] === 'Se alguém fica muito na loja, então sabe das câmeras' && resultados[1] === 'O cliente não ficou muito tempo na loja'">
+      <b>Mary Stearns não sabe das câmeras.</b></p>
+  </ion-grid>
+
+  <ion-grid
+    *ngIf="resultados.length >= 2 && resultados[0] === 'Se alguém fica muito na loja, então sabe das câmeras' && resultados[1] === 'O cliente não ficou muito tempo na loja'">
+    <div cdkDropList class="example-list" style="margin-top: 10px;" [cdkDropListData]="resultados"
+      (cdkDropListDropped)="drop($event, 2)">
+      <div class="example-box" cdkDrag>
+        {{ resultados[2] || '' }}
+      </div>
+    </div>
+    <p>e Mary Stearns não sabe das câmeras,</p>
+    <p>logo: </p>
+    <p
+      *ngIf="resultados.length >= 3 && resultados[2] !== 'Se alguém sabe onde ficam as câmeras então pode desviar delas'">
+      Isso não parece certo... Preciso analizar melhor.</p>
+    <div style="text-align: center;"
+      *ngIf="resultados.length >= 3 && resultados[2] === 'Se alguém sabe onde ficam as câmeras então pode desviar delas'">
+      <p><b>Mary Stearns não pode desviar das câmeras, então ela não é o ladrão.</b></p>
+      <br>
+      <button class="btn btn-logica" primary ion-button (click)="avancar()">
+        Avançar
+      </button>
+    </div>
+  </ion-grid>
+</ion-content>

@@ -6,16 +6,15 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 import swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-logica-george',
-  templateUrl: 'logica-george.page.html',
-  styleUrls: ['logica-george.page.scss'],
+  selector: 'app-logica-mary',
+  templateUrl: 'logica-mary.page.html',
+  styleUrls: ['logica-mary.page.scss'],
 })
-export class LogicaGeorgePage implements OnInit {
+export class LogicaMaryPage implements OnInit {
   frases = [
-    'Se a jóia é roubada, ela não tem selo de autencidade',
-    'Se ele busca algo para a coleção, então ele é um colecionador',
-    'Se ele é um colecionador, então ele precisa do selo de autenticidade',
-    'Ele veio buscar algo pra coleção'
+    'Se alguém fica muito na loja, então sabe das câmeras',
+    'Se alguém sabe onde ficam as câmeras então pode desviar delas',
+    'O cliente não ficou muito tempo na loja',
   ];
   resultados = [];
   subsResultados: Observable<any[]>;
@@ -32,9 +31,7 @@ export class LogicaGeorgePage implements OnInit {
     // });
   }
 
-  ngOnInit() {
-    swal.fire('Resolva o caso', 'Arraste as frases na ordem correta de acordo com a formula lógica e chegue a solução do caso!');
-  }
+  ngOnInit() {}
 
   drop(event: CdkDragDrop<string[]>, index?) {
     if (event.previousContainer === event.container) {
@@ -49,6 +46,6 @@ export class LogicaGeorgePage implements OnInit {
   }
 
   avancar() {
-    this.navCtrl.navigateRoot(['logica-mary']);
+    this.navCtrl.navigateRoot(['logica-joanne']);
   }
 }
