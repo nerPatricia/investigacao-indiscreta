@@ -42,7 +42,7 @@
 
   <ion-grid
     *ngIf="resultados.length >= 2 && resultados[0] === 'Se uma porta não foi arrombada, então ela foi aberta por uma chave' && resultados[1] === 'Se uma porta foi aberta por uma chave, então o ladrão possuía uma chave'">
-    <h3 style="text-align: center;"><b>(P->Q)^(Q->R)=>(P->R)</b></h3>
+    <h3 style="text-align: center;"><b>~Q^(P->Q)=>~P</b></h3>
     <br>
     <div cdkDropList class="example-list" style="margin-top: 10px;" [cdkDropListData]="resultados"
       (cdkDropListDropped)="drop($event, 2)">

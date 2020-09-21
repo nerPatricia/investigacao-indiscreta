@@ -1,0 +1,56 @@
+<app-header [showButtonBack]="'/'" title="Ralph Farreli"></app-header>
+
+<ion-content class="ion-padding bg" cdkDropListGroup>
+  <ion-grid>
+    <div cdkDropList class="example-list" [cdkDropListData]="frases" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let frase of frases" cdkDrag>
+        <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+        {{ frase }}
+      </div>
+    </div>
+
+    <ion-row>
+      <ion-col>
+        <p>Com base nos depoimentos e as informações que tenho, preciso chegar em uma
+          conclusão utilizando minha lógica:</p>
+        <h3 style="text-align: center;"><b>(P->Q)^(Q->R)=>(P->R)</b></h3>
+      </ion-col>
+    </ion-row>
+
+    <!-- TODO: ser um campo só ao invés de uma droplist -->
+    <div cdkDropList class="example-list" style="margin-top: 10px;" [cdkDropListData]="resultados"
+      (cdkDropListDropped)="drop($event, 0)">
+      <div class="example-box" cdkDrag>
+        {{ resultados[0] || '' }}
+      </div>
+    </div>
+    <p>e</p>
+    <div cdkDropList class="example-list" style="margin-top: 10px;" [cdkDropListData]="resultados"
+      (cdkDropListDropped)="drop($event, 1)">
+      <div class="example-box" cdkDrag>
+        {{ resultados[1] || '' }}
+      </div>
+    </div>
+    <p>logo: </p>
+    <p
+      *ngIf="resultados.length >= 2 && (resultados[0] !== 'O patrão não conferiu o depósito ou ele não tinha ligado para a polícia ainda' || resultados[1] !== 'Ele já tinha ligado pra polícia')">
+      Isso não parece certo... Preciso analizar melhor.</p>
+    <p
+      *ngIf="resultados.length >= 2 && resultados[0] === 'O patrão não conferiu o depósito ou ele não tinha ligado para a polícia ainda' && resultados[1] === 'Ele já tinha ligado pra polícia'">
+      <b>Ralph Farreli está mentindo, ele é o ladrão!</b></p>
+    <p
+      *ngIf="resultados.length >= 2 && resultados[0] === 'O patrão não conferiu o depósito ou ele não tinha ligado para a polícia ainda' && resultados[1] === 'Ele já tinha ligado pra polícia'">
+      <b>A jóia nunca esteve em posse da joalheria, Ralph Farreli apenas aproveitou a encomenda de um cliente e no
+        desespero de se salvar da falência, tentou aplicar um golpe no seguro fingindo um roubo.
+      </b></p>
+
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <button class="btn btn-logica" primary ion-button (click)="avancar()">
+          Retornar ao início
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

@@ -1,8 +1,7 @@
 import { NavController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-logica-joanne',
@@ -18,17 +17,7 @@ export class LogicaJoannePage implements OnInit {
   resultados = [];
   subsResultados: Observable<any[]>;
 
-  constructor(
-    private navCtrl: NavController,
-    private route: ActivatedRoute,
-    private router: Router,
-  ) {
-    // this.route.queryParams.subscribe(params => {
-    //   if (this.router.getCurrentNavigation().extras.state) {
-    //     this.event = this.router.getCurrentNavigation().extras.state.event;
-    //   }
-    // });
-  }
+  constructor(private navCtrl: NavController) {}
 
   ngOnInit() {}
 
