@@ -1,6 +1,6 @@
 <app-header [showButtonBack]="'/'" title="George Cotson"></app-header>
 
-<ion-content class="ion-padding" cdkDropListGroup>
+<ion-content class="ion-padding bg" cdkDropListGroup>
   <ion-grid>
     <div cdkDropList class="example-list" [cdkDropListData]="frases" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let frase of frases" cdkDrag>
@@ -59,10 +59,11 @@
     <p
       *ngIf="resultados.length >= 4 && (resultados[2] !== 'Se ele é um colecionador, então ele precisa do selo de autenticidade' || resultados[3] !== 'Se a jóia é roubada, ela não tem selo de autencidade')">
       Isso não parece certo... Preciso analizar melhor.</p>
-    <div
+    <div style="text-align: center;"
       *ngIf="resultados.length >= 4 && resultados[2] === 'Se ele é um colecionador, então ele precisa do selo de autenticidade' && resultados[3] === 'Se a jóia é roubada, ela não tem selo de autencidade'">
-      <p>George Cotson não é o ladrão.</p>
-      <button class="btn-acessar" primary ion-button (click)="avancar()">
+      <p><b>George Cotson não é o ladrão.</b></p>
+      <br>
+      <button class="btn btn-logica" primary ion-button (click)="avancar()">
         Avançar
       </button>
     </div>

@@ -28,6 +28,11 @@
 /* Configure Leaflet */
 @import "~leaflet/dist/leaflet.css";
 
+// cor do background
+ion-content {
+    --ion-background-color: var(--ion-color-primary) !important;
+}
+
 // diminui a sombra do header 
 .header-md:after {
     background-position: left 0 top -4px !important;
@@ -45,12 +50,13 @@
 
 // layout do botão padrão
 .btn {
-    border-radius: 5px;
-    width: 100%;
-    height: 2.9em;
+    border-radius: 16px !important;
+    width: 50% !important;
+    height: 2.7em !important;
     font-size: 1em;
-    color: white;
-    background-color: var(--ion-color-primary);
+    font-weight: 500;
+    color: var(--ion-color-primary);
+    background-color: var(--ion-color-light);
 }
 
 // tira a borda dos input e deixa igual o ion-input
@@ -81,5 +87,11 @@ ion-textarea {
 
 p {
     font-size: 13px !important;
-    color: rgb(44, 44, 44) !important;
+    color: var(--ion-color-light);
+}
+
+h1,
+h4,
+h3 {
+    color: var(--ion-color-light);
 }

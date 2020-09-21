@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
@@ -30,30 +29,22 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 // http://ionicframework.com/docs/theming/
 
 /** Ionic CSS Variables **/
+
+// primary: #34495c,
+// secondary: #253442,
+// danger: #f53d3d,
+// light: #f4f4f4,
+// dark: #222,
+// green: #0fa122,
+// orange: #da8d36,
+// grey: #e8e8e8,
+// dark_grey: #bdbdbd
 :root {
-  /** primary **/
-  --ion-color-primary: #B690E6;
-  --ion-color-primary-rgb: 182, 144, 230;
-  --ion-color-primary-contrast: #000000;
-  --ion-color-primary-contrast-rgb: 0, 0, 0;
-  --ion-color-primary-shade: #a07fca;
-  --ion-color-primary-tint: #cdb1f3;
-
-  /** secondary **/
-  --ion-color-secondary: #E6E6E6;
-  --ion-color-secondary-rgb: 230, 230, 230;
-  --ion-color-secondary-contrast: #3f3f3f;
-  --ion-color-secondary-contrast-rgb: 0, 0, 0;
-  --ion-color-secondary-shade: #cacaca;
-  --ion-color-secondary-tint: #fafafa;
-
-  /** tertiary **/
-  --ion-color-tertiary: #976DD0;
-  --ion-color-tertiary-rgb: 151, 109, 208;
-  --ion-color-tertiary-contrast: #000000;
-  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
-  --ion-color-tertiary-shade: #8560b7;
-  --ion-color-tertiary-tint: #a17cd5;
+  --ion-color-primary: #34495c;
+  --ion-color-secondary: #253442;
+  --ion-color-grey: #e8e8e8;
+  --ion-color-dark-grey: #bdbdbd;
+  --ion-color-orange: #da8d36;
 
   /** success **/
   --ion-color-success: #2dd36f;
@@ -72,7 +63,7 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
   --ion-color-warning-tint: #ffca22;
 
   /** danger **/
-  --ion-color-danger: #eb445a;
+  --ion-color-danger: #f53d3d;
   --ion-color-danger-rgb: 235, 68, 90;
   --ion-color-danger-contrast: #ffffff;
   --ion-color-danger-contrast-rgb: 255, 255, 255;
@@ -96,7 +87,7 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
   --ion-color-medium-tint: #9d9fa6;
 
   /** light **/
-  --ion-color-light: #f4f5f8;
+  --ion-color-light: #f4f4f4;
   --ion-color-light-rgb: 244, 245, 248;
   --ion-color-light-contrast: #000000;
   --ion-color-light-contrast-rgb: 0, 0, 0;
@@ -254,5 +245,13 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
     --ion-tab-bar-background: #1f1f1f;
   }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
