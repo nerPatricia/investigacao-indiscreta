@@ -32,6 +32,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/logica-mary/logica-mary.module').then(m => m.LogicaMaryPageModule)
   },
+  {
+    path: 'logica-joanne',
+    loadChildren: () =>
+      import('./pages/logica-joanne/logica-joanne.module').then(m => m.LogicaJoannePageModule)
+  },
 ];
 
 @NgModule({
