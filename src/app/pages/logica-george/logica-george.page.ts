@@ -51,11 +51,4 @@ export class LogicaGeorgePage implements OnInit {
   avancar() {
     this.navCtrl.navigateRoot(['logica-joanne']);
   }
-
-
-// Geolocation
-// NativeGeocoder
-// QRScanner
-// Leaflet
-// angular-jwt
 }
